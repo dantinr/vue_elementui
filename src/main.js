@@ -3,12 +3,9 @@ import App from './App.vue'
 import router from './router'
 import './assets/css/global.css'
 import 'element-ui/lib/theme-chalk/index.css'
-import { Button, Select } from 'element-ui'
+import './plugins/element.js'
 
 Vue.config.productionTip = false
-
-Vue.use(Button)
-Vue.use(Select)
 
 new Vue({
   router,
