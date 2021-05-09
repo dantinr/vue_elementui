@@ -6,8 +6,27 @@
       </div>
     </el-header>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-main>Main</el-main>
+      <el-aside width="250px">
+
+<!--        菜单开始-->
+        <el-menu
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b">
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>用户管理</span>
+            </template>
+            <el-menu-item index="1-1" to="/users">用户列表</el-menu-item>
+          </el-submenu>
+        </el-menu>
+<!--        菜单结束-->
+
+      </el-aside>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -33,7 +52,7 @@ export default {
     align-content: center;
   }
   .el-aside {
-    background-color: antiquewhite;
+    background-color: #545c64;
     height: 100%;
   }
   .el-main {
